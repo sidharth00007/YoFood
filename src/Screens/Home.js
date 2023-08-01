@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import Card from '../components/Card'
+import {BASE_URL} from "../baseURL"
 // import Carousel from '../components/Carousel'
 
 export default function Home() {
@@ -11,7 +12,7 @@ export default function Home() {
   const [search, setSearch] = useState('')
 
   const loadData = async () => {
-    let response = await fetch("http://localhost:5000/api/foodData", {
+    let response = await fetch(`${BASE_URL}/api/foodData`, {
       // credentials: 'include',
       // Origin:"http://localhost:3000/login",
       method: 'POST',

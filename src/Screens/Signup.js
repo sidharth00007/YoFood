@@ -2,6 +2,8 @@ import React from 'react'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import Navbar from '../components/Navbar'
+import {BASE_URL} from "../baseURL"
+
 
 
 export default function Signup() {
@@ -10,7 +12,7 @@ export default function Signup() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const response = await fetch("http://localhost:5000/api/createuser", {
+        const response = await fetch(`${BASE_URL}/api/createuser`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
