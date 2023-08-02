@@ -40,8 +40,8 @@ export default function Login() {
     <div>
       <Navbar />
     </div>
-    <div className='container'>
-      <form className='w-50 m-auto mt-5 border bg-dark rounded' onSubmit={handleSubmit}>
+    <div id='signup' className='container'>
+      <form id='form-signup' className='w-50 m-auto mt-5 border bg-dark rounded' onSubmit={handleSubmit}>
         <div className="m-3">
           <label htmlFor="exampleInputEmail1" className="form-label">Email address</label>
           <input type="email" className="form-control" name='email' value={credentials.email} onChange={onChange} aria-describedby="emailHelp" />
@@ -51,8 +51,8 @@ export default function Login() {
           <label htmlFor="exampleInputPassword1" className="form-label">Password</label>
           <input type="password" className="form-control" value={credentials.password} onChange={onChange} name='password' />
         </div>
-        <button type="submit" className="m-3 btn btn-success">Submit</button>
-        <Link to="/createuser" className="m-3 mx-1 btn btn-danger">New User</Link>
+        <button type="submit" className="m-3 btn btn-primary">Submit</button>
+        <Link to="/createuser" className="m-3  btn btn-danger">New User</Link>
       </form>
 
     </div>

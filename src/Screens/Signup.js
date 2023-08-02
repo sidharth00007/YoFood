@@ -38,8 +38,8 @@ export default function Signup() {
             <div>
                 <Navbar />
             </div>
-            <div className='container'>
-                <form className='w-50 m-auto mt-5 border bg-dark  rounded' onSubmit={handleSubmit}>
+            <div className='container' id='signup'>
+                <form  id='form-signup' className='w-50 m-auto mt-5 border bg-dark  rounded' onSubmit={handleSubmit}>
                     <div className="m-3">
                         <label htmlFor="name" className="form-label">Name</label>
                         <input type="text" className="form-control" name='name' value={credentials.name} onChange={onChange} />

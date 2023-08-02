@@ -13,9 +13,36 @@ code {
     monospace;
 }
 
-#carousel{
+#carousel {
   max-height: 500px;
 }
-.carouselImg{
+
+.carouselImg {
   object-fit: contain !important;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #00bc8c;
+}
+
+::-webkit-scrollbar {
+  background-color: #111111;
+  width: 0.2rem;
+}
+
+@media screen and (max-width: 720px) {
+  #form-signup {
+    margin-left: 30px !important;
+    margin-top: 110px !important;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  #signup {
+    width: 40rem;
+  }
 }
