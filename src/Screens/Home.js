@@ -16,11 +16,11 @@ export default function Home() {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
-      },
+      }
       // mode: 'no-cors'
     })
     response = await response.json()
-    console.log(response[0], response[1])
+    // console.log(response[0], response[1])
     setFoodItem(response[0])
     setFoodCat(response[1])
   }
@@ -75,7 +75,7 @@ export default function Home() {
                   .map(filterItems => {
                     return (
                       <div key={filterItems.id} className='col-12 col-md-6 col-lg-3'>
-                        {console.log(filterItems.url)}
+                        {/* {console.log(filterItems.url)} */}
                         <Card
                           foodItem={filterItems}
                           options={filterItems.options[0]} >

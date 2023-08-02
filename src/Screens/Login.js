@@ -20,14 +20,14 @@ export default function Login() {
 
     });
     const json = await response.json()
-    console.log(json);
+    // console.log(json);
     if (!json.success) {
       alert("Try logging with correct credentials")
     }
     if (json.success) {
       localStorage.setItem('userEmail', credentials.email)
       localStorage.setItem('authToken', json.authToken)
-      console.log(localStorage.getItem("authToken"))
+      // console.log(localStorage.getItem("authToken"))
       navigate("/")
     }
   }

@@ -4,7 +4,8 @@ const User = require('../models/User')
 const { body, validationResult } = require('express-validator');
 const jwt = require("jsonwebtoken")
 const bcrypt = require("bcryptjs")
-const jwtSecret = 'HelloMyNameIsSidHowAreYou$#'
+const SECRET = process.env.SECRET
+const jwtSecret = `${SECRET}`
 // const cors = require("cors");
 // router.use(cors());
 
