@@ -5,6 +5,8 @@ const { body, validationResult } = require('express-validator');
 const jwt = require("jsonwebtoken")
 const bcrypt = require("bcryptjs")
 const jwtSecret = 'HelloMyNameIsSidHowAreYou$#'
+// const cors = require("cors");
+// router.use(cors());
 
 router.post('/createuser', [
     body('email', 'Enter Correct Email').isEmail(),

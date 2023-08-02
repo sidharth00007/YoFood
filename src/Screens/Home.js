@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import Card from '../components/Card'
-import {BASE_URL} from "../baseURL"
+import { BASE_URL } from '../baseURL'
 // import Carousel from '../components/Carousel'
 
 export default function Home() {
@@ -13,12 +13,11 @@ export default function Home() {
 
   const loadData = async () => {
     let response = await fetch(`${BASE_URL}/api/foodData`, {
-      // credentials: 'include',
-      // Origin:"http://localhost:3000/login",
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
-      }
+      },
+      // mode: 'no-cors'
     })
     response = await response.json()
     console.log(response[0], response[1])
